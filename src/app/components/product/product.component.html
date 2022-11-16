@@ -5,7 +5,7 @@
     Price: <span class="font-bold"> {{ product.price | currency: "EUR" }}</span>
   </p>
   <p>
-    Rate: <span class="font-bold"> {{ product.rating.rate }}</span>
+    Rate: <span class="font-bold"> {{ product.rating?.rate }}</span>
   </p>
 
   <button
@@ -19,7 +19,7 @@
     {{ details ? "Hide" : "Show" }} Details
   </button>
 
-  <p *ngIf="details" class="border rounded border-r-4 px-2 py-4">
+  <p *ngIf="details" class="border rounded px-2 py-4">
     {{ product.description }}
   </p>
 </div>
